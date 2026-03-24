@@ -1,0 +1,36 @@
+.btn-agrandar {
+    -fx-transition: all 0.2s ease-in-out;
+    /* Esto define la transición para suavizar el cambio */
+}
+
+.btn-agrandar:hover {
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+    -fx-cursor: hand;
+}
+
+.titulo-brillante {
+    -fx-text-fill: linear-gradient(to right, #ffffff, #00d9ff, #ffffff);
+    -fx-effect: dropshadow( gaussian , #00bbff, 10, 0.7, 0, 0);
+    -fx-font-weight: bold;
+    -fx-font-size: 47px;
+    -fx-animation: brillo 2s infinite alternate ease-in-out;
+}
+
+@keyframes brillo {
+    0% {
+        -fx-effect: dropshadow( gaussian , #00c5ff, 5, 0.7, 0, 0);
+        -fx-text-fill: linear-gradient(to right, #ffffff, #003bff, #ffffff);
+    }
+    100% {
+        -fx-effect: dropshadow( gaussian , #00a7ff, 20, 0.9, 0, 0);
+        -fx-text-fill: linear-gradient(to right, #69c6de, #00f8ff, #b4f5ff);
+    }
+}
+.titulo-brillante2 {
+    -fx-text-fill: linear-gradient(to right, #ffffff, #4200ff, #ffffff);
+    -fx-effect: dropshadow( gaussian , #524a9c, 10, 0.7, 0, 0);
+    -fx-font-weight: bold;
+    -fx-font-size: 47px;
+    -fx-animation: brillo 2s infinite alternate ease-in-out;
+}

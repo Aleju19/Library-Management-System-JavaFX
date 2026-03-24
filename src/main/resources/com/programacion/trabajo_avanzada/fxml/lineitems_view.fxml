@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="523.0" prefWidth="866.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.programacion.trabajo_avanzada.controllers.LineItemsController">
+
+    <children>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="179.0" layoutX="67.0" layoutY="221.0" stroke="BLACK" strokeType="INSIDE" width="310.0" />
+        <ImageView fitHeight="179.0" fitWidth="344.0" layoutX="341.0" layoutY="-36.0" pickOnBounds="true" preserveRatio="true" styleClass="titulo-brillante">
+            <image>
+                <Image url="@../images/Nube.png" />
+            </image>
+        </ImageView>
+        <Label layoutX="357.0" layoutY="38.0" prefHeight="31.0" prefWidth="159.0" styleClass="titulo-seccion" text="LINE ITEMS">
+            <font>
+                <Font name="System Bold Italic" size="28.0" />
+            </font>
+        </Label>
+
+        <!-- Tabla -->
+        <TableView fx:id="tablaItems" layoutX="430.0" layoutY="113.0" prefHeight="332.0" prefWidth="398.0" style="-fx-border-color: #21130d;">
+            <columns>
+                <TableColumn fx:id="colId" prefWidth="76.8" style="-fx-border-color: #21130d;" text="ID" />
+                <TableColumn fx:id="colOrderId" prefWidth="108.0" style="-fx-border-color: #21130d;" text="ORDER ID" />
+                <TableColumn fx:id="colQuantity" prefWidth="123.2" style="-fx-border-color: #21130d;" text="CANTIDAD" />
+                <TableColumn fx:id="colIsbn" prefWidth="89.6" style="-fx-border-color: #21130d;" text="ISBN" />
+            </columns>
+        </TableView>
+        <TextField fx:id="txtOrderId" layoutX="81.0" layoutY="248.0" prefHeight="26.0" prefWidth="283.0" style="-fx-background-color: #d2d2d2;" />
+        <TextField fx:id="txtQuantity" layoutX="81.0" layoutY="303.0" prefHeight="26.0" prefWidth="283.0" style="-fx-background-color: #d2d2d2;" />
+        <TextField fx:id="txtIsbn" layoutX="81.0" layoutY="359.0" prefHeight="26.0" prefWidth="283.0" style="-fx-background-color: #d2d2d2;" />
+
+        <!-- Botones -->
+        <Button layoutX="67.0" layoutY="408.0" mnemonicParsing="false" onAction="#guardarItem" style="-fx-background-color: #063970;" styleClass="btn-agrandar" text="Agregar lineItem" textFill="WHITE">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+
+        <Button layoutX="218.0" layoutY="408.0" mnemonicParsing="false" onAction="#editarItem" prefHeight="31.0" prefWidth="159.0" style="-fx-background-color: #063970;" styleClass="btn-agrandar" text="Actualizar información" textFill="WHITE">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Button>
+
+        <Button layoutX="685.0" layoutY="479.0" mnemonicParsing="false" onAction="#eliminarItem" prefHeight="31.0" prefWidth="147.0" style="-fx-background-color: #F70B0B;" styleClass="btn-agrandar" text="Eliminar lineItem" textFill="WHITE">
+            <font>
+                <Font name="System Bold Italic" size="15.0" />
+            </font>
+        </Button>
+
+        <Label layoutX="82.0" layoutY="223.0" prefHeight="25.0" prefWidth="221.0" text="Ingrese el ID de la orden:">
+            <font>
+                <Font name="System Bold Italic" size="16.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="83.0" layoutY="277.0" prefHeight="25.0" prefWidth="221.0" text="Ingrese la cantidad:">
+            <font>
+                <Font name="System Bold Italic" size="16.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="84.0" layoutY="332.0" prefHeight="25.0" prefWidth="221.0" text="Ingrese el ISBN del libro:">
+            <font>
+                <Font name="System Bold Italic" size="16.0" />
+            </font>
+        </Label>
+
+        <Text layoutX="67.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Llene todos los campos para agregar un nuevo line item o seleccione uno de la tabla para actualizar su información." textAlignment="JUSTIFY" wrappingWidth="310.0">
+            <font>
+                <Font name="Berlin Sans FB" size="19.0" />
+            </font>
+        </Text>
+
+        <!-- Botón volver -->
+        <ImageView fitHeight="43.0" fitWidth="61.0" layoutX="8.0" layoutY="8.0" onMouseClicked="#volverMenu" pickOnBounds="true" preserveRatio="true" styleClass="btn-agrandar">
+            <image>
+                <Image url="@../images/FlechaAtras.png" />
+            </image>
+        </ImageView>
+
+        <!-- Icono de basurero -->
+        <ImageView fitHeight="56.0" fitWidth="29.0" layoutX="832.0" layoutY="478.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../images/Basurero.png" />
+            </image>
+        </ImageView>
+    </children>
+    <stylesheets>
+        <URL value="@style.css" />
+    </stylesheets>
+</AnchorPane>
