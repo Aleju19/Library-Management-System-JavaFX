@@ -8,11 +8,12 @@ A sophisticated Java application that handles library inventory and bookshop sal
 * **CDI Architecture:** Utilizes Contexts and Dependency Injection to ensure a decoupled and testable codebase.
 * **Build Automation:** Fully managed with **Gradle**.
 
-## 🛠 Tech Stack
-* **Language:** Java
-* **UI:** JavaFX & Scene Builder
+## 🛠 Tech Stack & Architecture
+* **Core Framework:** Java 21 + JavaFX (Modular JPMS)
+* **Dependency Injection & Data:** Spring Framework (Core, JDBC, Data JDBC)
+* **Connection Pool:** HikariCP (High-performance JDBC connection pooling)
 * **Database:** PostgreSQL
-* **Tools:** Flyway, Gradle, IntelliJ IDEA
+* **Build System:** Gradle (Kotlin DSL)
 
 ## 🏗 Schema Overview
 The system includes:
